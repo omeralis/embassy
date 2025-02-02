@@ -31,4 +31,5 @@ Route::middleware(['check_citizen'])->group(function ()
 {
     Route::get('/dashboard', [CitizenController::class, 'home'])->name('dashboard');
     Route::get('/somePage' , [CitizenController::class, 'somePage'])->name('somePage');
+    Route::get('/logout' , [CitizenController::class, 'logout'])->name('logout');
 });

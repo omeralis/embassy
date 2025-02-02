@@ -12,7 +12,13 @@ class CitizenController extends Controller
 
     public function home()
     {
-        return view('citizen/home');  
+        $data = [
+            'name' => 'Alice',
+            'age' => 25,
+            'city' => 'London'
+        ];
+
+      return view('citizen/home' , $data);  
     }
 
 
@@ -86,7 +92,7 @@ class CitizenController extends Controller
         Session::flush();
 
         // Redirect to the login page with a logout message
-        return redirect()->route('login')->with('message', 'You have been logged out successfully');
+        return redirect()->route('/')->with('message', 'You have been logged out successfully');
     }
 
     public function somePage()
