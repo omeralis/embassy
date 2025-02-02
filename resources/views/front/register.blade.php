@@ -26,10 +26,7 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
         </div>
-        <div>
-            <label for="date">Date of Registration:</label>
-            <input type="date" id="date" name="date" required>
-        </div>
+        
         <button type="submit">Register</button>
     </form>
     

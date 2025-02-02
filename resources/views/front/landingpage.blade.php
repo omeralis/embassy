@@ -67,7 +67,7 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">الرئيسية</a></li>
-            <li><a href="#about">دخول</a></li>
+            <li><a href="/login">دخول</a></li>
             {{-- <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#team">Team</a></li>

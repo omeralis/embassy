@@ -14,7 +14,6 @@ class CreateCitizensTable extends Migration
             $table->string('phone_number')->unique();
             $table->string('igama_number')->unique();
             $table->string('password');
-            $table->date('date');
             $table->boolean('active')->default(true); // Default to active
             $table->timestamps();
         });

@@ -12,9 +12,9 @@ class CitizenController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'phone_number' => 'required',
-            'igama_number' => 'required|unique:citizens',
+            'igama_number' => 'required|unique:citizens|max:255',
             'password' => 'required|string|min:6',
-            'date' => 'required|date',
+            
         ]);
 
         $citizen = Citizen::create([
@@ -22,7 +22,7 @@ class CitizenController extends Controller
             'phone_number' => $request->phone_number,
             'igama_number' => $request->igama_number,
             'password' => Hash::make($request->password),
-            'date' => $request->date,
+            
             'active' => true, // Optional if you want to set it to active by default
         ]);
 

@@ -17,7 +17,7 @@ use App\Http\Controllers\CitizenController;
 
 
 Route::get('/', function () {
-    return view('front/welcome');
+    return view('front/landingpage');
 });
 
  
