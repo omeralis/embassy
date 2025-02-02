@@ -12,7 +12,7 @@ class CitizenController extends Controller
 
     public function home()
     {
-        echo " Home ";
+        return view('citizen/home');  
     }
 
 
@@ -104,11 +104,6 @@ class CitizenController extends Controller
             // return redirect()->route('login')->with('message', 'You must log in first');
         }
     }
-
-
-
-
-
-
+ 
 
 }
