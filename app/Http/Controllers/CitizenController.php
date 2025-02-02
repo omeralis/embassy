@@ -12,11 +12,23 @@ class CitizenController extends Controller
 
     public function home()
     {
-        $data = [
-            'name' => 'Alice',
-            'age' => 25,
-            'city' => 'London'
-        ];
+
+        if (! Session::has('citizen_id')) 
+        {
+            // return redirect()->route('login')->with('message', 'You must log in first');
+        }
+
+        $data = [];
+
+ 
+        $data["citizen_id"] = Session::get('citizen_id');
+        $data["citizen_phone"] = Session::get('citizen_phone');
+        $data["citizen_igama"] = Session::get('citizen_igama');
+        $data["citizen_active"] = Session::get('citizen_active');
+        $data["citizen_name"] = Session::get('citizen_name');
+
+ 
+       
 
       return view('citizen/home' , $data);  
     }

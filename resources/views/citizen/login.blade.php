@@ -1,7 +1,7 @@
 @extends('citizen.header')
 
 
-
+<body dir="rtl">
 <main>
     <div class="container">
 
