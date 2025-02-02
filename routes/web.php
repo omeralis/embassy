@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CitizenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('front/welcome');
 });
+
+ 
+Route::get('/register', function () {
+    return view('front/register');
+});
+
+Route::get('/login', function () {
+    return view('front/login');
+});
+
+Route::post('/register', [CitizenController::class, 'register']);
+Route::post('/login', [CitizenController::class, 'login']);
