@@ -25,7 +25,7 @@ class CitizenController extends Controller
         $data["citizen_active"] = Session::get('citizen_active');
         $data["citizen_name"] = Session::get('citizen_name');
  
-      echo "Hissro";
+ 
       return view('citizen/home' , $data);  
 
     }
