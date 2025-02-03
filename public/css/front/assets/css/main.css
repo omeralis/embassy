@@ -910,6 +910,7 @@ section,
 
 .hero .carousel-control-prev,
 .hero .carousel-control-next {
+  display: none !important;
   width: 15%;
   transition: 0.3s;
   opacity: 0.4;
